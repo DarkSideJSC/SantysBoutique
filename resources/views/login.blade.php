@@ -12,7 +12,7 @@
     </div>
 @endif
 
-    <form action="">
+    <form action="{{ route('inicio.usuario') }}">
         <div class="login-container">
             <h2>Iniciar Sesión</h2>
             <form>

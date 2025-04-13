@@ -9,13 +9,13 @@ use App\Http\Controllers\UsuariosController;
 */
 
 Route::get('/', [IndexController::class, 'login']);
-
+Route::get('/inicio', [IndexController::class, 'inicio'])->name('inicio.usuario');
 //-------------------- Administracion de Usuarios -----------------------
-Route::get('/usuarios', [UsuariosController::class, 'listar_usuarios'])->name('usuarios');;
+Route::get('/usuarios', [UsuariosController::class, 'listar_usuarios'])->name('usuarios');
 
 Route::get('/usuarios/eliminar', [UsuariosController::class, 'eliminar']);
 // Crear Usuario
-Route::get('/usuarios/crear', [UsuariosController::class, 'crear_form']);
+Route::get('/usuarios/crear', [UsuariosController::class, 'crear_form'])->name('crea.usuario');
 Route::post('/usuarios/creado', [UsuariosController::class, 'crear'])->name('crear.usuario');
 // Actualizar Usuario
 Route::get('/usuarios/actualiza/{id}', [UsuariosController::class, 'actualiza_form'])->name('actualiza.usuario');
